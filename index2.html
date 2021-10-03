@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efflux</title>
+   <link href="./style.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+   <script src="script/dash.all.js"></script>
+
+  <body>
+    <div class="navlogo" style="padding: 30px 50px">
+     <a href="/"><h1 style="color: #21afb8; cursor: pointer;">efflux</h1></a>
+    </div>
+    <div class="container" style="margin-top: 10px; padding-bottom: 140px;">
+    <video id="html5video" width="80%" height="80%" controls>
+        </video>
+    </div>
+    </div>
+  </body>
+     <script>
+            // setup the video element and attach it to the Dash player
+            var url = "./media/stream_en.mpd";
+            var context = new Dash.di.DashContext();
+            var player = new MediaPlayer(context);
+            player.startup();
+            player.attachView(document.querySelector("#html5video"));
+            player.attachSource(url);
+        </script>
+        <script src="script/main.js"></script>
+  
+</html>
