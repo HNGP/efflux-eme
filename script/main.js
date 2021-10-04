@@ -85,8 +85,11 @@ function handleMessage(event) {
   var keySession = event.target;
   console.warn("MediaKeySession : " + event.target);
   var te = new TextEncoder();
+  // var license = te.encode(
+  //   '{"keys":[{"kty":"oct","k":"87237D20A19F58A740C05684E699DALLE","kid":"A16E402B9056E371F36D348AA62B2093"}],"type":"temporary"}'
+  // );
   var license = te.encode(
-    '{"keys":[{"kty":"oct","k":"87237D20A19F58A740C05684E699DALLE","kid":"A16E402B9056E371F36D348AA62B2093"}],"type":"temporary"}'
+    '{"keys":[{"kty":"oct","k":"hyN9IKGfWKdAwFaE5pm0qg","kid":"oW5AK5BW43HzbTSKpiu3SQ"}],"type":"temporary"}'
   );
   keySession.update(license).catch(function (error) {
     console.error("Failed to update the session", error);
